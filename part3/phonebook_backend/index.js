@@ -20,10 +20,6 @@ app.use(
 app.use(cors())
 
 
-const PORT = 3001
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
 
 let numbers = [
     { 
@@ -105,4 +101,9 @@ app.post('/api/persons', (request, response) => {
 
     numbers = numbers.concat(num)
     response.json(num)
+})
+
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
 })
