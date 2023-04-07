@@ -15,10 +15,10 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/persons')
+    numService
+      .getAll()
       .then(response => {
-        setPersons(response.data)
+        setPersons(response)
       })
   }, [])
 

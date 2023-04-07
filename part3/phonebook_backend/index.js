@@ -1,5 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 
 morgan.token('post', (req, res) => {
     if (req.method == 'POST'){
@@ -16,6 +17,7 @@ app.use(
         ':method :url :status :res[content-length] - :response-time ms :post'
     )
 )
+app.use(cors())
 
 
 const PORT = 3001
@@ -48,7 +50,6 @@ let numbers = [
 
 app.get('/api/persons', (request, response) => {
     response.json(numbers)
-
   })
 
 app.get('/info', (request, response) => {
