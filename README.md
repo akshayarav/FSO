@@ -1,1 +1,1 @@
-**Phonebook Application:** :https://phonebookapp-y6tl.onrender.com/api/persons
+**Phonebook Application:** :https://phonebookapp-y6tl.onrender.com/
